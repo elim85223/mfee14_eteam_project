@@ -175,22 +175,25 @@ function MessageText(props) {
           {/* 會員照片 */}
           <img
             className="messageTextImg"
-            src={`http://localhost:7000/img/${
-              usersImg.length && usersImg[0].uImg
-            }`}
-            alt="123"
+            src="http://localhost:3000/users/小海.jpg"
+            // src={`http://localhost:7000/img/${
+            //   usersImg.length && usersImg[0].uImg
+            // }`}
+            alt="小海"
             // style={{ width: '100px' }}
           ></img>
           <div class="messageTextNameAndStar">
             {/* 會員名稱 */}
             <div className="messageTextName">
-              {usersImg.length && usersImg[0].uName}
+              小海
+              {/* {usersImg.length && usersImg[0].uName} */}
             </div>
             <Box component="fieldset" mb={3} borderColor="transparent">
               <Typography component="legend"></Typography>
               <Rating
                 name="mStar"
-                value={mStar}
+                value={4}
+                // value={mStar}
                 onChange={(e) => {
                   setMstar(e.target.value)
                 }}
